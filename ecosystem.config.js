@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: "LandingTNCGLOBALLTD",
+            name: "mdn-project",
             script: "./pages/index.js",
             watch: true,
             env: {
@@ -9,15 +9,4 @@ module.exports = {
             }
         }
     ],
-    // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    //     config.module.rules.push({
-    //         test: /\.(js|jsx)$/,
-    //         exclude: /node_modules/,
-    //         use: {
-    //             loader: 'babel-loader',
-    //         },
-    //     });
-
-    //     return config;
-    // },
 };
