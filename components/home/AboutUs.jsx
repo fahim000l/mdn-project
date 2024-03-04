@@ -1,5 +1,5 @@
-// import Image from 'next/image'
-// import aboutUsImage from '../../assets/images/about_us_image.jpg'
+import Image from 'next/image'
+import aboutUsImage from '../../assets/images/about_us_image.jpg'
 import Button from '../../tools/Button'
 import { Suspense, useEffect, useState } from 'react'
 import React from 'react'
@@ -37,7 +37,7 @@ const AboutUs = () => {
                     }
                 </div>
             </div>
-            {/* <Image data-aos='fade-left' alt='about_us' src={aboutUsImage} className='lg:-ml-[100px] lg:w-[50%] w-[70%] md:w-[50%] lg:h-[60vh] h-[40vh] lg:rounded-[10px] rounded-[5px]' /> */}
+            <Image data-aos='fade-left' alt='about_us' src={aboutUsImage} className='lg:-ml-[100px] lg:w-[50%] w-[70%] md:w-[50%] lg:h-[60vh] h-[40vh] lg:rounded-[10px] rounded-[5px]' />
         </section>
     )
 }
