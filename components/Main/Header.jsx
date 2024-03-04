@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import navLogo from '../../assets/images/nav_white_logo.png'
+// import Image from 'next/image'
+// import navLogo from '../../assets/images/nav_white_logo.png'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import React from 'react'
