@@ -36,7 +36,9 @@ const Header = () => {
 
     return (
         <header className={`${scrolling ? 'bg-[#4b4949]' : ''} sticky top-0 w-full flex justify-between items-center h-[56px] lg:px-10 px-2 z-[900]`}>
-            <Link onClick={() => setIsMenuOpen(false)} href={'/'} ><Image src={navLogo} alt='nav_logo' className='lg:w-[6rem] lg:h-[7vh] w-[100px] h-[50px]' /></Link>
+            <button onClick={() => setIsMenuOpen(false)}>
+                <Link href={'/'} ><Image src={navLogo} alt='nav_logo' className='lg:w-[6rem] lg:h-[7vh] w-[100px] h-[50px]' /></Link>
+            </button>
             <div id="navigation" className={`hidden lg:flex items-center space-x-5 font-semibold text-white`}>
                 <a onClick={() => setIsMenuOpen(false)} href='#about_us' className='hover:border-b-2 border-[#FF8600]'>About Us</a>
                 <a onClick={() => setIsMenuOpen(false)} href='#vision' className='hover:border-b-2 border-[#FF8600]'>Vision</a>
