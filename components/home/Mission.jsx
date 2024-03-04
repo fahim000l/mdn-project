@@ -1,7 +1,7 @@
-// import Image from "next/image"
-// import MissionImage from '../../assets/images/mission_image.jpg'
-// import AvatarCover from '../../assets/images/mission_avatar_cover.png'
-// import Avatar from '../../assets/images/mission_avatar.jpg'
+import Image from "next/image"
+import MissionImage from '../../assets/images/mission_image.jpg'
+import AvatarCover from '../../assets/images/mission_avatar_cover.png'
+import Avatar from '../../assets/images/mission_avatar.jpg'
 import Button from "../../tools/Button"
 import { Suspense, useState } from "react"
 import React from 'react'
@@ -37,7 +37,7 @@ const Mission = () => {
                     }
                 </div>
             </div>
-            {/* <Image alt="vision_image" src={MissionImage} className="lg:w-[30rem] h-[50vh] lg:rounded-tl-lg lg:rounded-bl-lg rounded-tr-[10px] lg:rounded-tr-[0px] rounded-tl-[10px] mb-10 lg:my-10" /> */}
+            <Image alt="vision_image" src={MissionImage} className="lg:w-[30rem] h-[50vh] lg:rounded-tl-lg lg:rounded-bl-lg rounded-tr-[10px] lg:rounded-tr-[0px] rounded-tl-[10px] mb-10 lg:my-10" />
 
         </div>
     )
