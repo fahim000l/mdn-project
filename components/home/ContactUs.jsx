@@ -120,7 +120,7 @@ const ContactUs = () => {
             <div data-aos="fade-right" className="bg-[#F6ECE1] lg:w-[50%] lg:p-10 p-5 lg:rounded-tr-[10px] lg:rounded-br-[10px]" >
                 <p className="font-semibold text-[24px] mb-10">Contact Us</p>
                 <div className='flex flex-col space-y-5'>
-                    <div className='flex items-start space-x-2 text-[#776E6E]'>
+                    {/* <div className='flex items-start space-x-2 text-[#776E6E]'>
                         <button id='location_icon' className='mt-1'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -131,7 +131,7 @@ const ContactUs = () => {
                             <span className='font-bold' >Address :</span>
                             <span> D8, 2nd floor, UCB bank building, Ghorowar mor, 70 feet Main Road, Eastern Housing, Pallabi, Mirpur sare11, Dhaka-1216</span>
                         </p>
-                    </div>
+                    </div> */}
                     <div className='flex items-start space-x-2 text-[#776E6E]'>
                         <button id='phone_icon' className='mt-1'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

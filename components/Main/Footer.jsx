@@ -41,7 +41,7 @@ const Footer = () => {
                 </div>
                 <div id="Our_business" className="flex flex-col lg:items-start items-center space-y-2" >
                     <p className="font-semibold" >CONTACT INFO</p>
-                    <p className="lg:text-start md:text-center text-center">Address : D8, 2nd floor, UCB bank building, Ghorowar mor, 70 feet Main Road, Eastern Housing, Pallabi, Mirpur sare11, Dhaka-1216</p>
+                    {/* <p className="lg:text-start md:text-center text-center">Address : D8, 2nd floor, UCB bank building, Ghorowar mor, 70 feet Main Road, Eastern Housing, Pallabi, Mirpur sare11, Dhaka-1216</p> */}
                     <p>Phone : +8809666-777122</p>
                     <p>Email : tncgloballimited@gmail.com</p>
                 </div>
