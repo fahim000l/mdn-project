@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Project1Image from '../../assets/images/project_1_image.jpg'
-import Project2Image from '../../assets/images/project_2_image.jpg'
+// import Image from 'next/image'
+// import Project1Image from '../../assets/images/project_1_image.jpg'
+// import Project2Image from '../../assets/images/project_2_image.jpg'
 import Button from '../../tools/Button'
 import React, { Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -14,7 +14,7 @@ const Projects = () => {
             <div className='flex lg:flex-col md:flex-row flex-col lg:space-y-10 md:space-x-5 lg:space-x-0 space-y-5 md:space-y-0'>
                 <div data-aos='zoom-in' className='flex lg:flex-row flex-col  items-center bg-[#FAFAFA] lg:w-[1047px] w-full p-5 rounded-[5px] lg:rounded-[10px] shadow-lg'>
                     <div className='flex place-items-center lg:w-[50%] w-full' >
-                        <Image alt='order_place' src={Project1Image} className='rounded-[5px] h-[50vh] w-full' />
+                        {/* <Image alt='order_place' src={Project1Image} className='rounded-[5px] h-[50vh] w-full' /> */}
                     </div>
                     <div className='flex flex-col lg:w-[50%] w-full lg:space-y-10 lg:p-10 md:p-5 p-2 space-y-5'>
                         <p>ORDERPLACE.COM</p>
@@ -28,7 +28,7 @@ const Projects = () => {
                 </div>
                 <div data-aos='zoom-in' className='flex lg:flex-row flex-col justify-between items-center bg-[#FAFAFA] lg:w-[1047px] w-full p-5 rounded-[5px] lg:rounded-[10px] shadow-lg'>
                     <div className='flex place-items-center lg:w-[50%] w-full' >
-                        <Image alt='order_place' src={Project2Image} className='rounded-[5px] h-[50vh] w-full' />
+                        {/* <Image alt='order_place' src={Project2Image} className='rounded-[5px] h-[50vh] w-full' /> */}
                     </div>
                     <div className='flex flex-col lg:w-[50%] w-full lg:space-y-10 lg:p-10 md:p-5 p-2 space-y-5'>
                         <p>BANBOX.COM</p>

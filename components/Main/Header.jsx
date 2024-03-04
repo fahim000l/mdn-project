@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import navLogo from '../../assets/images/nav_white_logo.png'
+// import Image from 'next/image'
+// import navLogo from '../../assets/images/nav_white_logo.png'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import React from 'react'
@@ -37,7 +37,7 @@ const Header = () => {
     return (
         <header className={`${scrolling ? 'bg-[#4b4949]' : ''} sticky top-0 w-full flex justify-between items-center h-[56px] lg:px-10 px-2 z-[900]`}>
             <button onClick={() => setIsMenuOpen(false)}>
-                <Link href={'/'} ><Image src={navLogo} alt='nav_logo' className='lg:w-[6rem] lg:h-[7vh] w-[100px] h-[50px]' /></Link>
+                {/* <Link href={'/'} ><Image src={navLogo} alt='nav_logo' className='lg:w-[6rem] lg:h-[7vh] w-[100px] h-[50px]' /></Link> */}
             </button>
             <div id="navigation" className={`hidden lg:flex items-center space-x-5 font-semibold text-white`}>
                 <a onClick={() => setIsMenuOpen(false)} href='#about_us' className='hover:border-b-2 border-[#FF8600]'>About Us</a>
