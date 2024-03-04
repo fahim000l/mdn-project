@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Project1Image from '../../assets/images/project_1_image.jpg'
 import Project2Image from '../../assets/images/project_2_image.jpg'
 import Button from '../../tools/Button'
-import React from 'react'
+import React, { Suspense } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 
 
@@ -18,7 +19,11 @@ const Projects = () => {
                     <div className='flex flex-col lg:w-[50%] w-full lg:space-y-10 lg:p-10 md:p-5 p-2 space-y-5'>
                         <p>ORDERPLACE.COM</p>
                         <p className='text-[#757575]'>Worldwide digital industrial platform</p>
-                        <Button>Read More</Button>
+                        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                            <Suspense fallback={"Loading"} >
+                                <Button>Read More</Button>
+                            </Suspense>
+                        </ErrorBoundary>
                     </div>
                 </div>
                 <div data-aos='zoom-in' className='flex lg:flex-row flex-col justify-between items-center bg-[#FAFAFA] lg:w-[1047px] w-full p-5 rounded-[5px] lg:rounded-[10px] shadow-lg'>
@@ -29,7 +34,11 @@ const Projects = () => {
                         <p>BANBOX.COM</p>
                         <p className='text-[#757575]'>E-Commerce platform</p>
                         <p className='text-[#757575]'>BANBOX.COM is an E-commerce platform. They offer fashionable products & quickest home delivery system. (edited) </p>
-                        <Button>Read More</Button>
+                        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                            <Suspense fallback={"Loading"} >
+                                <Button>Read More</Button>
+                            </Suspense>
+                        </ErrorBoundary>
                     </div>
                 </div>
             </div>

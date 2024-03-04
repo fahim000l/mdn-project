@@ -3,8 +3,9 @@ import MissionImage from '../../assets/images/mission_image.jpg'
 import AvatarCover from '../../assets/images/mission_avatar_cover.png'
 import Avatar from '../../assets/images/mission_avatar.jpg'
 import Button from "../../tools/Button"
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import React from 'react'
+import { ErrorBoundary } from "react-error-boundary"
 
 const Mission = () => {
     const [isExpanded, setIsExpanded] = useState(false)
@@ -28,7 +29,11 @@ const Mission = () => {
                     </p>
                     {
                         !isExpanded &&
-                        <Button onClick={() => setIsExpanded(true)} text={"Read More"}>Read More</Button>
+                        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                            <Suspense fallback={"Loading"} >
+                                <Button onClick={() => setIsExpanded(true)} text={"Read More"}>Read More</Button>
+                            </Suspense>
+                        </ErrorBoundary>
                     }
                 </div>
             </div>

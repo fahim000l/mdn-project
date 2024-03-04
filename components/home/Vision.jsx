@@ -3,8 +3,9 @@ import VisionImage from '../../assets/images/vision_image.jpg'
 import AvatarCover from '../../assets/images/vision_avatar_cover.png'
 import Avatar from '../../assets/images/vision_avatar.jpg'
 import Button from "../../tools/Button"
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import React from 'react'
+import { ErrorBoundary } from "react-error-boundary"
 
 
 
@@ -32,7 +33,11 @@ const Vision = () => {
                     </p>
                     {
                         !isExpanded &&
-                        <Button onClick={() => setIsExpanded(true)} text={"Read More"}>Read More</Button>
+                        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                            <Suspense fallback={"Loading"}>
+                                <Button onClick={() => setIsExpanded(true)} text={"Read More"}>Read More</Button>
+                            </Suspense>
+                        </ErrorBoundary>
                     }
                 </div>
             </div>

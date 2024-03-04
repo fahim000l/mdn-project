@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import aboutUsImage from '../../assets/images/about_us_image.jpg'
 import Button from '../../tools/Button'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import React from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 
 
@@ -28,7 +29,11 @@ const AboutUs = () => {
                     <p className='text-[#595959] lg:text-lg text-xs'>{!isEpanded ? aboutUsText?.length > 200 ? aboutUsText?.slice(0, 200) + '...' : aboutUsText : aboutUsText}</p>
                     {
                         !isEpanded &&
-                        <Button onClick={() => setIsExpanded(true)}>Read More</Button>
+                        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                            <Suspense fallback={"Loading"}>
+                                <Button onClick={() => setIsExpanded(true)}>Read More</Button>
+                            </Suspense>
+                        </ErrorBoundary>
                     }
                 </div>
             </div>

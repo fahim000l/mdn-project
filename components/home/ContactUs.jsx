@@ -1,8 +1,9 @@
 import Button from '../../tools/Button'
 import EmailJs from '@emailjs/browser'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import toast from 'react-hot-toast'
 import React from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 
 
@@ -110,7 +111,11 @@ const ContactUs = () => {
                         error?.field === 'message' && <p className='text-red-500'>{error.text}</p>
                     }
                 </div>
-                <Button type={'submit'} >Send</Button>
+                <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                    <Suspense fallback={"Loading"}>
+                        <Button type={'submit'} >Send</Button>
+                    </Suspense>
+                </ErrorBoundary>
             </form>
             <div data-aos="fade-right" className="bg-[#F6ECE1] lg:w-[50%] lg:p-10 p-5 lg:rounded-tr-[10px] lg:rounded-br-[10px]" >
                 <p className="font-semibold text-[24px] mb-10">Contact Us</p>
